@@ -1,0 +1,341 @@
+@import url(./fonts.css);
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  height: 100%;
+}
+ul,
+ol {
+  list-style: none;
+}
+a {
+  display: inline-block;
+  text-decoration: none;
+}
+image {
+  object-fit: cover;
+  display: flex;
+}
+body {
+  background-color: #effafa;
+  font-family: "League Spartan";
+}
+.container {
+  max-width: 1110px;
+  width: 100%;
+  margin: 0 auto;
+}
+menu {
+  padding-bottom: 100px;
+}
+header {
+  background-size: 100%;
+  background-position: right;
+  background-repeat: no-repeat;
+  background-image: url(../images/desktop/bg-header.png);
+  width: 100%;
+  height: 156px;
+  background-color: #5ca5a5;
+}
+/* .container :nth-child(1),
+.container :nth-child(2) {
+  border-left: 5px solid #5ca5a5;
+} */
+.job {
+  border-radius: 5px;
+  background-color: #ffffff;
+  margin-top: 24px;
+  box-shadow: 0px 15px 20px -5px #0d718226;
+}
+.job-card {
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  padding: 3.2rem 4rem;
+}
+.job-info {
+  gap: 2.4rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.job-info__description-1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.job-info__name {
+  cursor: pointer;
+
+  color: #5ca5a5;
+  font-family: League Spartan;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 16.56px;
+  text-align: left;
+}
+.job-info__new {
+  cursor: pointer;
+  margin: 0 0.8rem 0 1.5rem;
+  border-radius: 12px;
+  padding: 7px 8px 3px 8px;
+  font-family: League Spartan;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 14px;
+  letter-spacing: -0.10769230872392654px;
+  text-align: center;
+  color: #ffffff;
+  background-color: #5ca5a5;
+}
+.job-info__featured {
+  cursor: pointer;
+
+  border-radius: 12px;
+  padding: 7px 9px 3px 8px;
+  font-family: League Spartan;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 14px;
+  letter-spacing: -0.10769230872392654px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: white;
+  background-color: #2b3939;
+}
+.job-info__description-2 {
+  margin: 10px 0;
+}
+.specialty {
+  cursor: pointer;
+  color: #2b3939;
+  font-family: League Spartan;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 24px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+.specialty:hover {
+  color: #5ca5a5;
+}
+.job-info__description-3 {
+  color: #7c8f8f;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.job-info__time {
+  font-family: League Spartan;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.13846154510974884px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+.job-info__form {
+  margin: 0 4.1rem;
+  font-family: League Spartan;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.13846154510974884px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+.location {
+  font-family: League Spartan;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.13846154510974884px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+.job-skills {
+  gap: 1.6rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.skill-type {
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 5px 10px 3px 9px;
+  font-family: League Spartan;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: -0.1230769231915474px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #5ca5a5;
+  background-color: #eff6f6;
+}
+.skill-type:hover {
+  color: white;
+  background-color: #5ca5a5;
+}
+.line {
+  display: none;
+}
+@media screen and (max-width: 400px) {
+  .container {
+    max-width: 327px;
+  }
+  header {
+    background-image: url(../images/mobile/bg-header.png);
+  }
+  .job {
+    border-radius: 5px;
+    background-color: #ffffff;
+    margin-top: 3.2rem;
+    box-shadow: 0px 15px 20px -5px #0d718226;
+  }
+  .job-card {
+    justify-content: space-between;
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    padding: 2.4rem;
+  }
+  .job-info {
+    margin-bottom: 1.6rem;
+    gap: 0rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .line {
+    width: 279px;
+    height: 1px;
+    color: #b7c4c4;
+    display: block;
+  }
+  .logo {
+    margin-bottom: 1.5rem;
+    margin-top: -4.4rem;
+  }
+  .job-info__description-1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .job-info__name {
+    font-family: League Spartan;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 11.96px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+  }
+
+  .job-info__new {
+    margin: 0 0.8rem 0 3.3rem;
+    font-family: League Spartan;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 14px;
+    letter-spacing: -0.10769230872392654px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+  }
+  .job-info__featured {
+    cursor: pointer;
+    border-radius: 12px;
+    padding: 7px 9px 3px 8px;
+    font-family: League Spartan;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 14px;
+    letter-spacing: -0.10769230872392654px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+  }
+  .job-info__description-2 {
+    margin: 9px 0;
+  }
+  .specialty {
+    font-family: League Spartan;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 24px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+  }
+  .job-info__description-3 {
+    color: #7c8f8f;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .job-info__time {
+    font-family: League Spartan;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.1230769231915474px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+  }
+  .job-info__form {
+    margin: 0 2.3rem;
+    font-family: League Spartan;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.1230769231915474px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+  }
+  .location {
+    font-family: League Spartan;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.1230769231915474px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+  }
+  .job-skills {
+    margin-top: 1.6rem;
+    gap: 1.6rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .skill-type {
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 5px 10px 3px 9px;
+    font-family: League Spartan;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: -0.1230769231915474px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+  }
+}
